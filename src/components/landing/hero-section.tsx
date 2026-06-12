@@ -7,14 +7,13 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-coverflow'
 import Link from 'next/link'
-import { Logo } from '@/components/landing/logo'
-import { ArrowRight, Menu, Rocket, X } from 'lucide-react'
+import { Menu, Rocket, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { LogoIcon } from '../ui/logo'
 
 const menuItems = [
-    { name: 'Home', href: '#' },
-    { name: 'About Us', href: '#' },
-    { name: 'Features', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/content-3' }
 ]
 
 export default function HeroSection() {
@@ -33,7 +32,7 @@ export default function HeroSection() {
                                     href="/"
                                     aria-label="home"
                                     className="flex items-center space-x-2">
-                                    <Logo />
+                                    <LogoIcon />
                                 </Link>
 
                                 <button
@@ -65,14 +64,14 @@ export default function HeroSection() {
                                         asChild
                                         variant="outline"
                                         size="sm">
-                                        <Link href="#">
+                                        <Link href="/login">
                                             <span>Login</span>
                                         </Link>
                                     </Button>
                                     <Button
                                         asChild
                                         size="sm">
-                                        <Link href="#">
+                                        <Link href="/signup">
                                             <span>Signup</span>
                                         </Link>
                                     </Button>

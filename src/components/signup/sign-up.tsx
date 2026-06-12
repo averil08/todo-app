@@ -1,10 +1,10 @@
+import { LogoIcon } from '@/components/ui/logo'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import Link from 'next/link'
-import { LogoIcon } from '../ui/logo'
 
-export default function LoginPage() {
+export default function SignupPage() {
     return (
         <section className="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
             <form
@@ -17,13 +17,42 @@ export default function LoginPage() {
                             aria-label="go home">
                             <LogoIcon />
                         </Link>
-                        <h1 className="mb-1 mt-4 text-xl font-semibold">Sign In to Tailark</h1>
-                        <p className="text-sm">Welcome back! Sign in to continue</p>
+                        <h1 className="mb-1 mt-4 text-xl font-semibold">Create a Tailark Account</h1>
+                        <p className="text-sm">Welcome! Create an account to get started</p>
                     </div>
 
                     <hr className="my-4 border-dashed" />
 
-                    <div className="space-y-6">
+                    <div className="space-y-5">
+                        <div className="grid grid-cols-2 gap-3">
+                            <div className="space-y-2">
+                                <Label
+                                    htmlFor="firstname"
+                                    className="block text-sm">
+                                    Firstname
+                                </Label>
+                                <Input
+                                    type="text"
+                                    required
+                                    name="firstname"
+                                    id="firstname"
+                                />
+                            </div>
+                            <div className="space-y-2">
+                                <Label
+                                    htmlFor="lastname"
+                                    className="block text-sm">
+                                    Lastname
+                                </Label>
+                                <Input
+                                    type="text"
+                                    required
+                                    name="lastname"
+                                    id="lastname"
+                                />
+                            </div>
+                        </div>
+
                         <div className="space-y-2">
                             <Label
                                 htmlFor="email"
@@ -38,24 +67,12 @@ export default function LoginPage() {
                             />
                         </div>
 
-                        <div className="space-y-0.5">
-                            <div className="flex items-center justify-between">
-                                <Label
-                                    htmlFor="pwd"
-                                    className="text-sm">
-                                    Password
-                                </Label>
-                                <Button
-                                    asChild
-                                    variant="link"
-                                    size="sm">
-                                    <Link
-                                        href="#"
-                                        className="link intent-info variant-ghost text-sm">
-                                        Forgot your Password ?
-                                    </Link>
-                                </Button>
-                            </div>
+                        <div className="space-y-2">
+                            <Label
+                                htmlFor="pwd"
+                                className="text-sm">
+                                Password
+                            </Label>
                             <Input
                                 type="password"
                                 required
@@ -65,18 +82,18 @@ export default function LoginPage() {
                             />
                         </div>
 
-                        <Button className="w-full">Sign In</Button>
+                        <Button className="w-full">Continue</Button>
                     </div>
                 </div>
 
                 <div className="bg-muted rounded-(--radius) border p-3">
                     <p className="text-accent-foreground text-center text-sm">
-                        Don't have an account ?
+                        Have an account ?
                         <Button
                             asChild
                             variant="link"
                             className="px-2">
-                            <Link href="/signup">Create account</Link>
+                            <Link href="/login">Sign In</Link>
                         </Button>
                     </p>
                 </div>
