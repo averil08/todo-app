@@ -5,7 +5,7 @@ import todoImg from './todo.png'
 
 export default function ContentSection() {
     return (
-        <section className="py-16 md:py-32">
+        <section id="about" className="py-16 md:py-32">
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
                 <img
                     className="rounded-(--radius) grayscale"
