@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { todoApi } from "@/lib/api";
 import type { Todo } from "@/types/todo";
 import TodoTable from "@/components/todos/TodoTable";
 import CreateTodoDialog from "@/components/todos/CreateTodo";
+import { Button } from "@/components/ui/button";
 
 export default function DashboardPage() {
+  const router = useRouter();
   const [todos, setTodos] = useState<Todo[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,6 +19,11 @@ export default function DashboardPage() {
       .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    router.push("/login");
+  };
 
   const handleCreated = (todo: Todo) => setTodos((prev) => [todo, ...prev]);
 
@@ -34,7 +42,12 @@ export default function DashboardPage() {
             {todos.length} task{todos.length !== 1 ? "s" : ""} total
           </p>
         </div>
-        <CreateTodoDialog onCreated={handleCreated} />
+        <div className="flex items-center gap-3">
+          <CreateTodoDialog onCreated={handleCreated} />
+          <Button variant="outline" onClick={handleLogout}>
+            Logout
+          </Button>
+        </div>
       </div>
 
       {loading ? (
