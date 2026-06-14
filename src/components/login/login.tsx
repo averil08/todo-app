@@ -47,7 +47,7 @@ export default function LoginPage() {
         <div className="p-8 pb-6">
           <div>
             <Link href="/" aria-label="go home"><LogoIcon /></Link>
-            <h1 className="mb-1 mt-4 text-xl font-semibold">Sign In to Tailark</h1>
+            <h1 className="mb-1 mt-4 text-xl font-semibold">Sign In to Todo</h1>
             <p className="text-sm">Welcome back! Sign in to continue</p>
           </div>
 

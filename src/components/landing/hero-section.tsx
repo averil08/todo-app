@@ -87,10 +87,10 @@ export default function HeroSection() {
                         <div className="mx-auto max-w-7xl px-6 md:px-12">
                             <div className="text-center sm:mx-auto sm:w-10/12 lg:mr-auto lg:mt-0 lg:w-4/5">
                                 <h1 className="mt-8 text-4xl font-semibold md:text-5xl xl:text-5xl xl:[line-height:1.125]">
-                                    Tame the Wild West <br /> of Frontend Development
+                                    Tame the Wild West <br /> Get Things Done
                                 </h1>
-                                <p className="mx-auto mt-8 hidden max-w-2xl text-wrap text-lg sm:block">Tailwindcss highly customizable components for building modern websites and applications that look and feel the way you mean it.</p>
-                                <p className="mx-auto mt-6 max-w-2xl text-wrap sm:hidden">Highly customizable components for building modern websites and applications, with your personal spark.</p>
+                                <p className="mx-auto mt-8 hidden max-w-2xl text-wrap text-lg sm:block">A simple and powerful todo app to help you manage your tasks, track your progress, and stay on top of your day.</p>
+                                <p className="mx-auto mt-6 max-w-2xl text-wrap sm:hidden">Manage your tasks and stay productive with our simple todo app.</p>
 
                                 <div className="mt-8">
                                     <Button
@@ -98,7 +98,7 @@ export default function HeroSection() {
                                         asChild>
                                         <Link href="#">
                                             <Rocket className="relative size-4" />
-                                            <span className="text-nowrap">Start Building</span>
+                                            <span className="text-nowrap">Start Organizing</span>
                                         </Link>
                                     </Button>
                                 </div>
@@ -114,10 +114,10 @@ export default function HeroSection() {
                                     modules={[EffectCoverflow]}>
                                     <SwiperSlide className="px-2">
                                         <div className="bg-background rounded-(--radius) h-44 max-w-lg border p-9">
-                                            <div className="mx-auto h-fit w-full">
-                                                <NetlifyLogo />
+                                            <div className="mx-auto h-fit w-full flex items-center justify-center">
+                                                <LogoIcon />
                                             </div>
-                                            <p className="mt-6 text-center text-lg font-medium">30% Increase in revenue</p>
+                                            <p className="mt-6 text-center text-lg font-medium">30% Task completed on time</p>
                                         </div>
                                     </SwiperSlide>
                                     <SwiperSlide className="px-2">

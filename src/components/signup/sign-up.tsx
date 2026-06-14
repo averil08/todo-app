@@ -49,7 +49,7 @@ export default function SignupPage() {
         <div className="p-8 pb-6">
           <div>
             <Link href="/" aria-label="go home"><LogoIcon /></Link>
-            <h1 className="mb-1 mt-4 text-xl font-semibold">Create a Tailark Account</h1>
+            <h1 className="mb-1 mt-4 text-xl font-semibold">Create a Todo Account</h1>
             <p className="text-sm">Welcome! Create an account to get started</p>
           </div>
 
